@@ -10,35 +10,31 @@ import {
     SidebarMenuButton,
     SidebarMenuItem,
 } from "@/components/ui/sidebar"
-import { Calendar, Home, Inbox, Search, Settings } from "lucide-react"
+import { Calendar, Compass, GalleryHorizontalEnd, Home, Inbox, LogIn, Search, Settings } from "lucide-react"
 
 export function AppSidebar() {
     const items = [
         {
             title: "Home",
-            url: "#",
+            path: "/",
             icon: Home,
         },
         {
-            title: "Inbox",
-            url: "#",
-            icon: Inbox,
+            title: "Discover",
+            path: "/discover",
+            icon: Compass,
         },
         {
-            title: "Calendar",
-            url: "#",
-            icon: Calendar,
+            title: "Library",
+            path: "/library",
+            icon: GalleryHorizontalEnd,
         },
         {
-            title: "Search",
-            url: "#",
-            icon: Search,
+            title: "Login",
+            path: "/login",
+            icon: LogIn,
         },
-        {
-            title: "Settings",
-            url: "#",
-            icon: Settings,
-        },
+
     ]
     return (
         <Sidebar>
