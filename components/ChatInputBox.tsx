@@ -19,19 +19,19 @@ const ChatInputBox = () => {
       </div>
 
       <div className='max-w-2xl p-2 w-full border rounded-xl border-gray-600'>
-        <Tabs defaultValue="search" className="w-[260px]">
+        <Tabs  defaultValue="search" className="w-[260px] bg-transparent">
 
           <TabsContent value="search">
-            <Input type='text' className='outline-none p-14 border-none w-full focus:#fff' placeholder='Ask Anything' />
+            <Input type='text' className='outline-none p-4 border-none w-full focus:#fff' placeholder='Ask Anything' />
 
           </TabsContent>
           <TabsContent value="research">
             <Input type='text' className='outline-none p-4 border-none w-full focus:#fff' placeholder='Research Anything' />
 
           </TabsContent>
-          <TabsList className="grid w-full grid-cols-2">
-            <TabsTrigger value="search">Search</TabsTrigger>
-            <TabsTrigger value="research">Reserach</TabsTrigger>
+          <TabsList className="grid w-full gap-2   grid-cols-2">
+            <TabsTrigger  className='bg-transparent rounded-full' value="search">Search</TabsTrigger>
+            <TabsTrigger className='bg-transparent  rounded-full' value="research">Reserach</TabsTrigger>
           </TabsList>
         </Tabs>
       </div>
