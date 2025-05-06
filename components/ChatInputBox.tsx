@@ -9,7 +9,7 @@ import {
 import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from './ui/card'
 import { Label } from '@radix-ui/react-label'
 import { Button } from './ui/button'
-import { Atom, SearchCheckIcon } from 'lucide-react'
+import { Atom, Cpu, Globe, Mic, Paperclip, SearchCheckIcon } from 'lucide-react'
 
 const ChatInputBox = () => {
   return (
@@ -19,8 +19,8 @@ const ChatInputBox = () => {
         <span className="text-6xl font-thin">Beta.ai</span>
       </div>
 
-      <div className='max-w-2xl p-2 w-full border rounded-xl border-gray-600'>
-        <Tabs  defaultValue="search" className="w-[260px] bg-transparent">
+      <div className='max-w-2xl flex justify-between items-end p-2 w-full border rounded-xl border-gray-600'>
+        <Tabs defaultValue="search" className="w-[260px] bg-transparent">
 
           <TabsContent value="search">
             <Input type='text' className='outline-none p-4 border-none w-full focus:#fff' placeholder='Ask Anything' />
@@ -31,11 +31,18 @@ const ChatInputBox = () => {
 
           </TabsContent>
           <TabsList className="grid w-full gap-2   grid-cols-2">
-            <TabsTrigger  className='bg-transparent rounded-full text-primary ' value="search"><SearchCheckIcon/> Search</TabsTrigger>
-            <TabsTrigger className='bg-transparent  rounded-full text-primary ' value="research"><Atom/> Research</TabsTrigger>
+            <TabsTrigger className='bg-transparent rounded-full text-primary ' value="search"><SearchCheckIcon /> Search</TabsTrigger>
+            <TabsTrigger className='bg-transparent  rounded-full text-primary ' value="research"><Atom /> Research</TabsTrigger>
           </TabsList>
         </Tabs>
+        <div className='flex items-center gap-2 mb-1'>
+          <Cpu size={18}/>
+          <Globe size={18} />
+          <Paperclip size={18} />
+          <Mic  size={18}/>
+        </div>
       </div>
+
 
     </div>
   )
