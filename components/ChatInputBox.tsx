@@ -36,10 +36,10 @@ const ChatInputBox = () => {
           </TabsList>
         </Tabs>
         <div className='flex items-center gap-2 mb-1'>
-          <Cpu size={18}/>
-          <Globe size={18} />
-          <Paperclip size={18} />
-          <Mic  size={18}/>
+          <Cpu   className='text-primary rounded-full  hover:text-gray-800 bg-gray-200 p-[4px]  cursor-pointer' size={22} />
+          <Globe   className='text-primary rounded-full hover:text-gray-800 bg-gray-200 p-[4px]  cursor-pointer' size={22} />
+          <Paperclip   className='text-primary rounded-full  hover:text-gray-800 bg-gray-200 p-[4px] cursor-pointer' size={22} />
+          <Mic   className='text-primary rounded-full hover:text-gray-800 bg-gray-200 p-[4px]  cursor-pointer' size={22} />
         </div>
       </div>
 
