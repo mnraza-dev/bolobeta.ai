@@ -42,7 +42,7 @@ export function AppSidebar() {
     ]
     return (
         <Sidebar>
-            <SidebarHeader>
+            <SidebarHeader className="flex place-items-center">
                 <div className="flex">
                     <span className="text-green-800 text-2xl font-medium">Bolo</span>
                     <span className="text-2xl font-thin">Beta.ai</span>
