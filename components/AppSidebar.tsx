@@ -10,7 +10,7 @@ import {
     SidebarMenuButton,
     SidebarMenuItem,
 } from "@/components/ui/sidebar"
-import { Compass, GalleryHorizontalEnd, Home, LogIn } from "lucide-react"
+import { ArrowBigDownDash, ArrowBigRightDashIcon, ArrowBigRightIcon, ArrowUpRight, Compass, GalleryHorizontalEnd, Home, LogIn } from "lucide-react"
 import Link from "next/link"
 import { usePathname } from "next/navigation"
 import { Button } from "./ui/button"
@@ -73,7 +73,18 @@ export function AppSidebar() {
                     </SidebarGroupContent>
                 </SidebarGroup>
             </SidebarContent>
-            <SidebarFooter />
+            <SidebarFooter >
+
+                <div>
+                    <p className="font-semibold text-xs text-gray-600">Try Pro</p>
+                    <p className="text-[.6rem] text-gray-400">
+                        Upgrade for image upload, smarter AI, and more Copilot.    </p>
+                </div>
+                <Button variant={"outline"} className="cursor-pointer py-0 px-2">
+                    <ArrowUpRight /> Learn More
+                </Button>
+            </SidebarFooter>
+
         </Sidebar>
     )
 }
