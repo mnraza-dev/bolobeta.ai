@@ -5,7 +5,7 @@ import React from 'react'
 
 const Home = () => {
   return (
-    <div className='p-8 flex justify-center items-center'>
+    <div className='p-8 '>
       <ChatInputBox />
     </div>
   )
