@@ -9,6 +9,7 @@ import {
 import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from './ui/card'
 import { Label } from '@radix-ui/react-label'
 import { Button } from './ui/button'
+import { Atom, SearchCheckIcon } from 'lucide-react'
 
 const ChatInputBox = () => {
   return (
@@ -30,8 +31,8 @@ const ChatInputBox = () => {
 
           </TabsContent>
           <TabsList className="grid w-full gap-2   grid-cols-2">
-            <TabsTrigger  className='bg-transparent rounded-full' value="search">Search</TabsTrigger>
-            <TabsTrigger className='bg-transparent  rounded-full' value="research">Reserach</TabsTrigger>
+            <TabsTrigger  className='bg-transparent rounded-full text-primary ' value="search"><SearchCheckIcon/> Search</TabsTrigger>
+            <TabsTrigger className='bg-transparent  rounded-full text-primary ' value="research"><Atom/> Research</TabsTrigger>
           </TabsList>
         </Tabs>
       </div>
