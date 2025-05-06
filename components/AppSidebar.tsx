@@ -1,19 +1,23 @@
+"use client"
 import {
     Sidebar,
     SidebarContent,
     SidebarFooter,
     SidebarGroup,
     SidebarGroupContent,
-    SidebarGroupLabel,
     SidebarHeader,
     SidebarMenu,
     SidebarMenuButton,
     SidebarMenuItem,
 } from "@/components/ui/sidebar"
-import { Calendar, Compass, GalleryHorizontalEnd, Home, Inbox, LogIn, Search, Settings } from "lucide-react"
+import { Compass, GalleryHorizontalEnd, Home, LogIn } from "lucide-react"
 import Link from "next/link"
+import { usePathname } from "next/navigation"
+import { Button } from "./ui/button"
 
 export function AppSidebar() {
+
+    const path = usePathname()
     const items = [
         {
             title: "Home",
@@ -37,11 +41,13 @@ export function AppSidebar() {
         },
 
     ]
+
+
     return (
         <Sidebar>
             <SidebarHeader className="flex place-items-center">
                 <div className="flex">
-                    <span className="text-green-800 text-2xl font-medium">Bolo</span>
+                    <span className="text-[#008189] text-2xl font-medium">Bolo</span>
                     <span className="text-2xl font-thin">Beta.ai</span>
                 </div>
             </SidebarHeader>
@@ -52,15 +58,18 @@ export function AppSidebar() {
                         <SidebarMenu>
                             {items.map((item) => (
                                 <SidebarMenuItem key={item.title}>
-                                    <SidebarMenuButton asChild>
+                                    <SidebarMenuButton asChild className={`hover:bg-transparent hover:font-bold ${path?.includes(item.path) && 'font-bold'}`}>
                                         <Link href={item.path}>
                                             <item.icon />
-                                            <span>{item.title}</span>
+                                            <span >{item.title}</span>
                                         </Link>
                                     </SidebarMenuButton>
                                 </SidebarMenuItem>
                             ))}
                         </SidebarMenu>
+                        <Button className="rounded-full px-8 mt-4 mx-7" size={"sm"} variant={"default"}>
+                            Sign Up
+                        </Button>
                     </SidebarGroupContent>
                 </SidebarGroup>
             </SidebarContent>
