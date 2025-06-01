@@ -15,7 +15,7 @@ const ChatInputBox = () => {
   return (
     <div className='flex justify-center items-center flex-col gap-6'>
       <div className="flex items-center ">
-        <span className="text-[#008189] text-6xl font-medium">Bolo</span>
+        <span className="text-[#0d5d63] text-6xl font-medium">Bolo</span>
         <span className="text-6xl font-thin">Beta.ai</span>
       </div>
 
