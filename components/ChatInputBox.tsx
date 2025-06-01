@@ -35,7 +35,7 @@ const ChatInputBox = () => {
             <TabsTrigger className='bg-transparent  rounded-full text-primary ' value="research"><Atom /> Research</TabsTrigger>
           </TabsList>
         </Tabs>
-        <div className='flex items-center gap-2 mb-1'>
+        <div className='flex items-center gap-2 mb-2'>
           <Cpu   className='text-primary rounded-full  hover:text-gray-800 bg-gray-200 p-[4px]  cursor-pointer' size={22} />
           <Globe   className='text-primary rounded-full hover:text-gray-800 bg-gray-200 p-[4px]  cursor-pointer' size={22} />
           <Paperclip   className='text-primary rounded-full  hover:text-gray-800 bg-gray-200 p-[4px] cursor-pointer' size={22} />
